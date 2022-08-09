@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/aayojak/static/css/main.fafa97e1.css",
-    "main.js": "/aayojak/static/js/main.495bdb39.js",
-    "static/media/Aayojak-1.png": "/aayojak/static/media/Aayojak-1.17b0777093b7b0babc63.png",
+    "main.css": "/aayojak/static/css/main.0f6b1aec.css",
+    "main.js": "/aayojak/static/js/main.27713c0d.js",
+    "static/media/Aayojak-1.jpg": "/aayojak/static/media/Aayojak-1.494a4f96e1269dfe5cc6.jpg",
     "index.html": "/aayojak/index.html",
-    "main.fafa97e1.css.map": "/aayojak/static/css/main.fafa97e1.css.map",
-    "main.495bdb39.js.map": "/aayojak/static/js/main.495bdb39.js.map"
+    "main.0f6b1aec.css.map": "/aayojak/static/css/main.0f6b1aec.css.map",
+    "main.27713c0d.js.map": "/aayojak/static/js/main.27713c0d.js.map"
   },
   "entrypoints": [
-    "static/css/main.fafa97e1.css",
-    "static/js/main.495bdb39.js"
+    "static/css/main.0f6b1aec.css",
+    "static/js/main.27713c0d.js"
   ]
 }
