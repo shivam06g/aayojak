@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/aayojak/static/css/main.f521299e.css",
+    "main.js": "/aayojak/static/js/main.bc244c21.js",
+    "static/media/home2.png": "/aayojak/static/media/home2.6ff5d1f8c65ca3158862.png",
+    "static/media/Aayojak-logos_white.png": "/aayojak/static/media/Aayojak-logos_white.f3827d949401ca21ba5f.png",
+    "static/media/wave1.png": "/aayojak/static/media/wave1.4de881bf35ead0adb3ae.png",
+    "index.html": "/aayojak/index.html",
+    "main.f521299e.css.map": "/aayojak/static/css/main.f521299e.css.map",
+    "main.bc244c21.js.map": "/aayojak/static/js/main.bc244c21.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f521299e.css",
+    "static/js/main.bc244c21.js"
+  ]
+}
