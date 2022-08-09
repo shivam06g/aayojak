@@ -1,0 +1,54 @@
+.nav-bar1 {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.navbar {
+  background-image: linear-gradient(to left, #5f1782, #a517ba);
+  padding: 0 !important;
+}
+.navbar-brand img {
+  height: 100px;
+  width: auto;
+  padding-left: 10px;
+}
+.navbar-nav li {
+  padding: 0 10px;
+}
+.navbar-nav li a {
+  color: white !important;
+  font-weight: 600;
+  float: right;
+}
+.fa-hand-o-down {
+  color: white;
+  font-size: 30px;
+}
+.navbar-toggler {
+  outline: none !important;
+}
+
+/* banner */
+
+.banner {
+  background-image: linear-gradient(to left, #5f1782, #a517ba);
+  color: white;
+  padding-top: 3%;
+}
+.promo-title {
+  font-size: 100px;
+  font-weight: 600;
+  margin-top: 100px;
+}
+
+.play-btn {
+  width: 40px;
+  margin: 20px;
+}
+#banner a {
+  color: #fff;
+  text-decoration: none;
+}
+.bottom-img {
+  width: 100%;
+}
