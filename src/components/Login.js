@@ -1,5 +1,5 @@
 import React from 'react'
-import "./Login.css"
+import "../css/Login.css"
 import profile from "../logo/Aayojak-logos/Aayojak-1.jpg";
 
 export default function Login() {

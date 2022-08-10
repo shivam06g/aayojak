@@ -1,12 +1,10 @@
-import "./Dashboard.css";
-import home2 from './image/home2.png'
-import wav1 from './image/wave1.png'
-import logo from './logo/Aayojak-logos/Aayojak-logos_white.png'
-function Dashboard() {
+import React from 'react'
+import '../css/Navbar.css'
+import logo from '../logo/Aayojak-logos (1)/Aayojak-logos_white.png'
+export default function Navbar() {
   return (
-    <>
-      {/* <!-- navbar --> */}
-      <div className="nav-bar">
+    <div>
+       <div className="nav-bar">
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <a className="navbar-brand logo" href="/">
             <img src={logo} alt="logo"/>
@@ -53,27 +51,6 @@ function Dashboard() {
           </div>
         </nav>
       </div>
-      {/* <!-- banner --> */}
-      
-<div className="banner">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-6">
-              <p className="promo-title">Aayojak</p>
-              {/* <p>
-                Components and options for laying out your Bootstrap project,
-                including wrapping containers, a powerful grid system, a
-                flexible media object, and responsive utility classNamees.
-              </p> */}
-            </div>
-            <div className="col-md-6 text-center">
-              <img src={home2} alt="home2" className="img-fluid" />
-            </div>
-          </div>
-        </div>
-        <img src={wav1} alt="nfgvjfs" className="bottom-img" />
-      </div>
-    </>
-  );
+    </div>
+  )
 }
-export default Dashboard;

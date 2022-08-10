@@ -1,0 +1,29 @@
+.nav-bar1 {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  .navbar {
+    background-image: linear-gradient(to right, #17062eca,#2f105aca, #ae2758);
+    padding: 0 !important;
+  }
+  .navbar-brand img {
+    height: 100px;
+    width: auto;
+    padding-left: 10px;
+  }
+  .navbar-nav li {
+    padding: 0 10px;
+  }
+  .navbar-nav li a {
+    color: white !important;
+    font-weight: 600;
+    float: right;
+  }
+  .fa-hand-o-down {
+    color: white;
+    font-size: 30px;
+  }
+  .navbar-toggler {
+    outline: none !important;
+  }

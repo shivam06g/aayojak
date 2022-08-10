@@ -1,0 +1,25 @@
+/* banner */
+
+.banner {
+  background-image: linear-gradient(to right, #17062eca, #2f105aca, #ae2758);
+  color: white;
+  padding-top: 3%;
+}
+.promo-title {
+  font-family: "Cinzel", serif;
+  font-size: 100px;
+  font-weight: 600;
+  margin-top: 100px;
+}
+
+.play-btn {
+  width: 40px;
+  margin: 20px;
+}
+#banner a {
+  color: #fff;
+  text-decoration: none;
+}
+.bottom-img {
+  width: 100%;
+}
