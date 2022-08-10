@@ -1,14 +1,16 @@
 {
   "files": {
-    "main.css": "/aayojak/static/css/main.bd51c691.css",
-    "main.js": "/aayojak/static/js/main.bef8c68c.js",
-    "static/media/Aayojak-1.jpg": "/aayojak/static/media/Aayojak-1.494a4f96e1269dfe5cc6.jpg",
+    "main.css": "/aayojak/static/css/main.2f672a5f.css",
+    "main.js": "/aayojak/static/js/main.045c623b.js",
+    "static/media/home2.png": "/aayojak/static/media/home2.6ff5d1f8c65ca3158862.png",
+    "static/media/Aayojak-logos_white.png": "/aayojak/static/media/Aayojak-logos_white.f71049ace41305f9993a.png",
+    "static/media/wave1.png": "/aayojak/static/media/wave1.4de881bf35ead0adb3ae.png",
     "index.html": "/aayojak/index.html",
-    "main.bd51c691.css.map": "/aayojak/static/css/main.bd51c691.css.map",
-    "main.bef8c68c.js.map": "/aayojak/static/js/main.bef8c68c.js.map"
+    "main.2f672a5f.css.map": "/aayojak/static/css/main.2f672a5f.css.map",
+    "main.045c623b.js.map": "/aayojak/static/js/main.045c623b.js.map"
   },
   "entrypoints": [
-    "static/css/main.bd51c691.css",
-    "static/js/main.bef8c68c.js"
+    "static/css/main.2f672a5f.css",
+    "static/js/main.045c623b.js"
   ]
 }
