@@ -1,0 +1,96 @@
+.profilelogo{
+    background-image: url(../image/bg1.jfif);
+    background-repeat: no-repeat;
+    height: 20vh;
+    background-size: cover;
+    text-align: center;
+    /* justify-content: center; */
+    /* align-items: center; */
+    display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.detail{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top:4em;
+}
+.editbtn {
+    width: 40%;
+    height: 3em;
+    border-width: 2px;
+    border-color: black;
+    /* background-color: rgb(32, 177, 255); */
+    font-size: large;
+    color: purple;
+    background-color: rgb(255, 256, 256);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    border-radius: 0.5em;
+    cursor: pointer;
+    
+  }
+  .column1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .editbtn:hover {
+    transform: scale(1.15);
+  }
+
+
+  .sidebar{
+    /* background-image: linear-gradient(to right, #17062eca,#2f105aca); */
+    background-color: lightgray;
+    padding: 0 !important;
+    width: 100%;
+    height: auto;
+  }
+
+  .imgs {
+    padding-top: 20px;
+    justify-content: center;
+    display: flex;
+  }
+  .container-image {
+    background-color: rgb(223, 221, 221);
+    border-radius: 150px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 115px;
+    width: 115px;
+  }
+  .profile {
+    height: 100px;
+    width: 100px;
+    border-radius: 130px;
+  }
+
+  .username {
+    font-family: 'Cinzel', serif;
+    /* font-family: 'Lobster', cursive; */
+  font-size: 3vmax;
+  color: purple;
+  font-weight: bolder;
+  font-stretch: ultra-expanded;
+  text-align: center;
+}
+
+.link
+
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:purple;
+    font-size: x-large;
+    font-weight: 700;
+    margin: 8px;
+}
