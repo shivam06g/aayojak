@@ -12,19 +12,19 @@ export default function Login() {
           </div>
         </div>
         <h1 className="headinglogin">Login</h1>
-        <input type="text" placeholder="username"></input>
+        <input type="email" placeholder="username"></input>
         <input type="password" placeholder="password"></input>
         {/* <div class="form-group"> */}
         <select className="form-control select1" id="inputGroupSelect01">
-          <option value="1">Owner</option>
-          <option value="2">admin</option>
-          <option value="3">Enduser</option>
+          <option value="1">AICTE Admin</option>
+          <option value="2">Insitute SPOC</option>
+          <option value="3">Factulty</option>
         </select>
         {/* </div>        */}
         <button className="loginbtn my-3">Login</button>
-        <p className="text">
-          <a href="/">Forgot password ?</a> Or <a href="/">Sign Up</a>
-        </p>
+        {/* <p className="text"> */}
+          {/* <a href="/">Forgot password ?</a> Or <a href="/">Sign Up</a> */}
+        {/* </p> */}
       </div>
     </>
   );
