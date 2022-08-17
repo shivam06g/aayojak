@@ -1,5 +1,6 @@
 import React from "react";
 import "../css/Navbar.css";
+// import './Profilejquery'
 import logo from "../logo/Aayojak-logos (1)/Aayojak-logos_white.png";
 export default function Navbar() {
   return (
@@ -11,7 +12,7 @@ export default function Navbar() {
               </a>
               {/* <button type="button" id="sidebarCollapse" class="btn btn-info">
                 <i class="fas fa-align-left"></i>
-                {/* {/* <span>Toggle Sidebar</span>  
+               {/* <span>Toggle Sidebar</span>  
               </button>
               <button
                 class="btn btn-dark d-inline-block d-lg-none ml-auto"

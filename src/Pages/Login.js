@@ -5,6 +5,7 @@ import profile from "../logo/Aayojak-logos/Aayojak-1.jpg";
 export default function Login() {
   return (
     <>
+    <div className="page">
       <div className="cover">
         <div className="imgs">
           <div className="container-image">
@@ -25,6 +26,7 @@ export default function Login() {
         {/* <p className="text"> */}
           {/* <a href="/">Forgot password ?</a> Or <a href="/">Sign Up</a> */}
         {/* </p> */}
+      </div>
       </div>
     </>
   );

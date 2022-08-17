@@ -1,8 +1,8 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import "../css/Profile.css";
-
-import profile from "../logo/Aayojak-logos/Aayojak-1.jpg";
+import "../components/Sidebar";
+import Sidebar from "../components/Sidebar";
 export default function Profile() {
   return (
     <div>
@@ -13,33 +13,9 @@ export default function Profile() {
       </div>
       <div className="row">
         {/* sidebar */}
-        <div className="col-3 sidebar">
-          <div className="row">
-            <div className="col-12">
-              <div className="imgs">
-                <div className="container-image">
-                  <img src={profile} alt="profile" className="profile" />
-                </div>
-              </div>
-              <h1 className="username">John Smith</h1>
-              <hr />
-              <a href="/" className="link">
-                Home
-              </a>
-              <a href="/" className="link">
-                Profile
-              </a>
-              <a href="/" className="link">
-                Event
-              </a>
-              <a href="/" className="link">
-                About
-              </a>
-              <a href="/" className="link">
-                Contact
-              </a>
-            </div>
-          </div>
+        
+      <div className="col-3 sidebar">
+        <Sidebar />
         </div>
         <div className="col-9">
           {/* profle logo */}
@@ -52,51 +28,51 @@ export default function Profile() {
           <div className="row">
             <div className="col-12 column1">
               <div className="container detail">
-                <div class="col-lg-10">
-                  <div class="card mb-4">
-                    <div class="card-body">
-                      <div class="row">
-                        <div class="col-sm-3">
-                          <p class="mb-0">Full Name</p>
+                <div className="col-lg-10">
+                  <div className="card mb-4">
+                    <div className="card-body">
+                      <div className="row">
+                        <div className="col-sm-3">
+                          <p className="mb-0">Full Name</p>
                         </div>
-                        <div class="col-sm-9">
-                          <p class="text-muted mb-0">John Smith</p>
-                        </div>
-                      </div>
-                      <hr />
-                      <div class="row">
-                        <div class="col-sm-3">
-                          <p class="mb-0">Email</p>
-                        </div>
-                        <div class="col-sm-9">
-                          <p class="text-muted mb-0">example@example.com</p>
+                        <div className="col-sm-9">
+                          <p className="text-muted mb-0">John Smith</p>
                         </div>
                       </div>
                       <hr />
-                      <div class="row">
-                        <div class="col-sm-3">
-                          <p class="mb-0">Phone</p>
+                      <div className="row">
+                        <div className="col-sm-3">
+                          <p className="mb-0">Email</p>
                         </div>
-                        <div class="col-sm-9">
-                          <p class="text-muted mb-0">(097) 234-5678</p>
-                        </div>
-                      </div>
-                      <hr />
-                      <div class="row">
-                        <div class="col-sm-3">
-                          <p class="mb-0">Mobile</p>
-                        </div>
-                        <div class="col-sm-9">
-                          <p class="text-muted mb-0">(098) 765-4321</p>
+                        <div className="col-sm-9">
+                          <p className="text-muted mb-0">example@example.com</p>
                         </div>
                       </div>
                       <hr />
-                      <div class="row">
-                        <div class="col-sm-3">
-                          <p class="mb-0">Address</p>
+                      <div className="row">
+                        <div className="col-sm-3">
+                          <p className="mb-0">Phone</p>
                         </div>
-                        <div class="col-sm-9">
-                          <p class="text-muted mb-0">
+                        <div className="col-sm-9">
+                          <p className="text-muted mb-0">(097) 234-5678</p>
+                        </div>
+                      </div>
+                      <hr />
+                      <div className="row">
+                        <div className="col-sm-3">
+                          <p className="mb-0">Mobile</p>
+                        </div>
+                        <div className="col-sm-9">
+                          <p className="text-muted mb-0">(098) 765-4321</p>
+                        </div>
+                      </div>
+                      <hr />
+                      <div className="row">
+                        <div className="col-sm-3">
+                          <p className="mb-0">Address</p>
+                        </div>
+                        <div className="col-sm-9">
+                          <p className="text-muted mb-0">
                             Bay Area, San Francisco, CA
                           </p>
                         </div>
