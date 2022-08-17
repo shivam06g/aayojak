@@ -1,13 +1,14 @@
 import "./App.css";
-import Login from "./Pages/Login";
+// import Login from "./Pages/Login";
 // import Navbar from "./components/Navbar";
 // import Banner from "./components/Banner";
-// import Profile from "./components/Profile";
+import Profile from "./Pages/Profile";
 
 function App() {
   return (
     <>
-    <Login />
+    {/* <Login /> */}
+    <Profile />
     </>
   );
 }
