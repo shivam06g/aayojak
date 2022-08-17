@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "./Navbar";
+import Navbar from "../components/Navbar";
 import "../css/Profile.css";
 
 import profile from "../logo/Aayojak-logos/Aayojak-1.jpg";
@@ -22,12 +22,10 @@ export default function Profile() {
                 </div>
               </div>
               <h1 className="username">John Smith</h1>
-
               <hr />
               <a href="/" className="link">
                 Home
               </a>
-
               <a href="/" className="link">
                 Profile
               </a>
