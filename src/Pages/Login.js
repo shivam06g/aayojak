@@ -21,7 +21,7 @@ export default function Login() {
           <option value="3">Factulty</option>
         </select>
         {/* </div>        */}
-        <button className="loginbtn my-3">Login</button>
+        <button className="loginbtn my-3"  >Login</button>
         {/* <p className="text"> */}
           {/* <a href="/">Forgot password ?</a> Or <a href="/">Sign Up</a> */}
         {/* </p> */}
