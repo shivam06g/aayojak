@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
+import { Navigate } from "react-router-dom";
 import "../css/Navbar.css";
 // import './Profilejquery'
 import logo from "../logo/Aayojak-logos (1)/Aayojak-logos_white.png";
 export default function Navbar() {
+  const [logout_status,change]=useState(false);
+  const logout=()=>{
+    localStorage.removeItem('jwt')
+    change(true);
+  }
+
+  if(logout_status=== true)
+    return <Navigate to="/"></Navigate>
   return (
     <div>
           <div className="nav-bar">
@@ -26,7 +35,7 @@ export default function Navbar() {
                 <i class="fas fa-align-justify"></i>
               </button> */}
               <div className="column3">
-              <button className="logutbtn my-3">LOGOUT</button>
+              <button className="logutbtn my-3" onClick={logout}>LOGOUT</button>
               </div>
             </nav>
           </div>

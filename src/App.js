@@ -4,6 +4,7 @@ import PrivateRoute from "./components/PrivateRoute";
 import PublicRoute from "./components/PublicRoute";
 import Login from "./Pages/Login";
 import Profile from "./Pages/Profile";
+import Banner from "./components/Banner";
 
 function App() {
   return (
@@ -14,6 +15,9 @@ function App() {
         </Route>
         <Route path="/users" element={<PrivateRoute />}>
           <Route path="/users" element={<Profile />}></Route>
+        </Route>
+        <Route path="/banner" element={<PrivateRoute />}>
+          <Route path="/banner" element={<Banner />}></Route>
         </Route>
       </Routes>
     </BrowserRouter>
