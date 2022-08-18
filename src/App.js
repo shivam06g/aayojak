@@ -1,15 +1,22 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
+import PrivateRoute from "./components/PrivateRoute";
+import PublicRoute from "./components/PublicRoute";
 import Login from "./Pages/Login";
-// import Navbar from "./components/Navbar";
-// import Banner from "./components/Banner";
-// import Profile from "./Pages/Profile";
+import Profile from "./Pages/Profile";
 
 function App() {
   return (
-    <>
-    <Login />
-    {/* <Profile /> */}
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route exact path="/" element={<PublicRoute />} >
+          <Route exact path="/" element={<Login />} ></Route>
+        </Route>
+        <Route path="/users" element={<PrivateRoute />}>
+          <Route path="/users" element={<Profile />}></Route>
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
