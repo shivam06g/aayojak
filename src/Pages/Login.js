@@ -107,7 +107,6 @@ const LoginForm = ()=>{
 
   return (
     <>
-<<<<<<< HEAD
     <div className="page">
       <div className="cover">
         <div className="imgs">
@@ -131,10 +130,7 @@ const LoginForm = ()=>{
         {/* </p> */}
       </div>
       </div>
-=======
        {LoginForm()}
-      
->>>>>>> 5097583addb91e17a17091d6eb7073c868e6018f
-    </>
+</>
   );
 }
