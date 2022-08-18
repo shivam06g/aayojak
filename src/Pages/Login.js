@@ -1,33 +1,114 @@
-import React from "react";
+import React, { useState } from "react";
 import "../css/Login.css";
 import profile from "../logo/Aayojak-logos/Aayojak-1.jpg";
 
+
 export default function Login() {
+
+  const [values,setValues] = useState({
+    email: "",
+    password: "",
+    userType:"",
+    error:"",
+    doRedirect: false,
+  });
+
+  const {email,password,doRedirect,userType,error} = values;
+
+  const handleChange = (event,name)=>{
+    setValues({...values,error:false,[name]: event.target.value})
+  } 
+
+  const signinHelper = async (user)=>{
+  let API = "";
+ 
+   if(userType==='aicte')
+   API = 'http://localhost:3100/auth/aicte'
+   else
+   if(userType==='institute')
+   {
+     API = 'http://localhost:3100/auth'
+   }
+   else{
+     API = 'http://localhost:3100/auth/facultymembers'
+   }
+
+    try {
+      const response = await fetch(`${API}/signin`, {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-type": "application/json"
+        },
+        body: JSON.stringify(user)
+      });
+      return await response.json();
+    } catch (err) {
+      return console.log(err);
+    }
+}
+
+const authenticate = (data)=>{
+  console.log(data);
+  if(typeof window!=="undefined"){
+    localStorage.setItem("jwt",JSON.stringify(data))
+  }
+
+}
+
+  const onSubmit = async(event)=>{
+
+    event.preventDefault();
+
+  //   setValues({...values,error:false,loading:true})
+    const data = await signinHelper({email,password});
+
+      if(data.error){
+        setValues({...values,error:data.error,loading: false})
+        alert(data.error)
+      }else{
+          authenticate(data);
+          setValues({...values,
+            
+            doRedirect:true
+          })
+          alert("signin success")
+      }
+  }
+
+  
+const LoginForm = ()=>{
+
+  return ( <div className="page">
+        <div className="cover">
+          <div className="imgs">
+            <div className="container-image">
+              <img src={profile} alt="profile" className="profile" />
+            </div>
+          </div>
+          <h1 className="headinglogin">Login</h1>
+  <input type="email" onChange={(e)=>handleChange(e,"email")} placeholder="email" value={email}/>
+  <input type="password" onChange={(e)=>handleChange(e,"password")} placeholder="password" value={password}/>
+          {/* <div class="form-group"> */}
+          <select className="form-control select1" id="userType" onChange={(e)=>handleChange(e,"userType")}>
+          <option value="">Select user Type</option>
+            <option value="aicte">AICTE Admin</option>
+            <option value="institute">Insitute SPOC</option>
+            <option value="faculty">Factulty</option>
+          </select>
+          {/* </div>        */}
+          <button className="loginbtn my-3" onClick={onSubmit}>Login</button>
+          {/* <p className="text"> */}
+            {/* <a href="/">Forgot password ?</a> Or <a href="/">Sign Up</a> */}
+          {/* </p> */}
+        </div>
+        </div>)
+  }
+
   return (
     <>
-    <div className="page">
-      <div className="cover">
-        <div className="imgs">
-          <div className="container-image">
-            <img src={profile} alt="profile" className="profile" />
-          </div>
-        </div>
-        <h1 className="headinglogin">Login</h1>
-        <input type="email" placeholder="username"></input>
-        <input type="password" placeholder="password"></input>
-        {/* <div class="form-group"> */}
-        <select className="form-control select1" id="inputGroupSelect01">
-          <option value="1">AICTE Admin</option>
-          <option value="2">Insitute SPOC</option>
-          <option value="3">Factulty</option>
-        </select>
-        {/* </div>        */}
-        <button className="loginbtn my-3">Login</button>
-        {/* <p className="text"> */}
-          {/* <a href="/">Forgot password ?</a> Or <a href="/">Sign Up</a> */}
-        {/* </p> */}
-      </div>
-      </div>
+       {LoginForm()}
+      
     </>
   );
 }
