@@ -13,9 +13,9 @@ export default function Profile() {
       </div>
       <div className="row">
         {/* sidebar */}
-        
-      <div className="col-3 sidebar">
-        <Sidebar />
+
+        <div className="col-3 sidebar">
+          <Sidebar />
         </div>
         <div className="col-9">
           {/* profle logo */}

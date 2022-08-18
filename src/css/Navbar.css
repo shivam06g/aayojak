@@ -2,7 +2,7 @@
     position: sticky;
     top: 0;
     z-index: 10;
-    width: auto;
+    width: 100%;
   }
   .column3{
     position: absolute;
@@ -11,11 +11,11 @@
   .navbar {
     background-image: linear-gradient(to right, #17062eca,#2f105aca, #ae2758);
     padding: 0 !important;
-    width: auto;
+    width: 100%;
   }
   .navbar-brand img {
     height: 80px;
-    width: auto;
+    width: 100%;
     padding-left: 10px;
   }
 

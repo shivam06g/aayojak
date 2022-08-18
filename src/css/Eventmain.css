@@ -1,0 +1,44 @@
+.sidebar{
+    /* background-image: linear-gradient(to right, #17062eca,#2f105aca); */
+    background-color: lightgray;
+    padding: 0 !important;
+    width: 100%;
+    height: auto;
+  }
+
+  .profilelogo{
+    background-image: url(../image/bg1.jfif);
+    background-repeat: no-repeat;
+    height: 15vh;
+    background-size: cover;
+    text-align: center;
+    /* justify-content: center; */
+    /* align-items: center; */
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+    font-family: 'Cinzel', serif;
+    /* font-family: 'Lobster', cursive; */
+  font-size: 3em;
+  color: purple;
+  font-weight: bolder;
+  font-stretch: ultra-expanded;
+
+}
+
+.containerjumbo{
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    /* font-family: 'Lobster', cursive; */
+  font-size: 3em;
+  color: purple;
+  font-weight: bolder;
+  font-stretch: ultra-expanded;
+}
+
+.faviconplus{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}

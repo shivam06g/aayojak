@@ -1,0 +1,25 @@
+.containerjumbo{
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    /* font-family: 'Lobster', cursive; */
+  font-size: 3em;
+  color: purple;
+  font-weight: bolder;
+  font-stretch: ultra-expanded;
+}
+
+.faviconform{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+ }
+
+ .profilelogo{
+  font-family: 'Cinzel', serif;
+  /* font-family: 'Lobster', cursive; */
+font-size: 3em;
+color: purple;
+font-weight: bolder;
+font-stretch: ultra-expanded;
+ }
