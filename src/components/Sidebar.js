@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom';
 import "../css/Sidebar.css"
 import profile from "../logo/Aayojak-logos/Aayojak-1.jpg";
 export default function Sidebar() {
@@ -13,9 +14,9 @@ export default function Sidebar() {
               </div>
               <h1 className="username">John Smith</h1>
               <hr />
-              <a href="/" className="link">
-                Home
-              </a>
+              <NavLink to="/banner" className="link">
+                banner
+              </NavLink>
               <a href="/" className="link">
                 Profile
               </a>

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Navigate } from "react-router-dom";
 import "../css/Login.css";
 import profile from "../logo/Aayojak-logos/Aayojak-1.jpg";
 
@@ -65,11 +66,13 @@ export default function Login() {
 
         doRedirect: true,
       });
-      alert("signin success");
+      // alert("signin success");
+      // <Navigate to="/users"></Navigate>
     }
   };
 
   const LoginForm = () => {
+    if(doRedirect=== true) return <Navigate to="/users"></Navigate>
     return (
       <div className="page">
         <div className="cover">
