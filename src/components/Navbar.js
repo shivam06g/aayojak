@@ -1,11 +1,16 @@
 import React, { useState } from "react";
 import { Navigate } from "react-router-dom";
+import { useProfile } from "../context/ProfileContext";
 import "../css/Navbar.css";
 // import './Profilejquery'
 import logo from "../logo/Aayojak-logos (1)/Aayojak-logos_white.png";
 export default function Navbar() {
+  // eslint-disable-next-line no-unused-vars
+  const {profile,setProfile}=useProfile()
+  console.log("Navbar",profile)
   const [logout_status,change]=useState(false);
   const logout=()=>{
+    setProfile(null)
     localStorage.removeItem('jwt')
     change(true);
   }

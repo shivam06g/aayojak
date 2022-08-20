@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 import { Navigate } from "react-router-dom";
+import { useProfile } from "../context/ProfileContext";
 import "../css/Login.css";
-import profile from "../logo/Aayojak-logos/Aayojak-1.jpg";
+// eslint-disable-next-line no-unused-vars
+// import profile from "../logo/Aayojak-logos/Aayojak-1.jpg";
 
 export default function Login() {
+  // eslint-disable-next-line no-unused-vars
+  const {profile,setProfile} = useProfile();
   const [values, setValues] = useState({
     email: "",
     password: "",
@@ -12,6 +16,7 @@ export default function Login() {
     doRedirect: false,
   });
 
+  // eslint-disable-next-line no-unused-vars
   const { email, password, doRedirect, userType, error } = values;
 
   const handleChange = (event, name) => {
@@ -63,9 +68,9 @@ export default function Login() {
       authenticate(data);
       setValues({
         ...values,
-
         doRedirect: true,
       });
+      setProfile({...values});
       // alert("signin success");
       // <Navigate to="/users"></Navigate>
     }
@@ -78,7 +83,7 @@ export default function Login() {
         <div className="cover">
           <div className="imgs">
             <div className="container-image">
-              <img src={profile} alt="profile" className="profile" />
+              <img  alt="profile" className="profile" />
             </div>
           </div>
           <h1 className="headinglogin">Login</h1>
