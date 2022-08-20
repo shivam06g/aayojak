@@ -72,7 +72,7 @@ export default function Login() {
   };
 
   const LoginForm = () => {
-    if(doRedirect=== true) return <Navigate to="/users"></Navigate>
+    if (doRedirect === true) return <Navigate to="/users"></Navigate>;
     return (
       <div className="page">
         <div className="cover">
@@ -105,6 +105,7 @@ export default function Login() {
             <option value="institute">Insitute SPOC</option>
             <option value="faculty">Factulty</option>
           </select>
+         
           {/* </div>        */}
           <button className="loginbtn my-3" onClick={onSubmit}>
             Login

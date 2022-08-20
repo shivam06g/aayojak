@@ -11,7 +11,7 @@ export default function Profile() {
           <Navbar />
         </div>
       </div>
-      <div className="row">
+      <div className="row" style={{height:"100vh"}}>
         {/* sidebar */}
 
         <div className="col-3 sidebar">
