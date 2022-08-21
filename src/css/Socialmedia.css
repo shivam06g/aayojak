@@ -1,0 +1,48 @@
+.inputphoto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:20px;
+}
+.editbtn2{
+    width: auto;
+    height: 4em;
+    /* border-width: 2px; */
+    /* border-color: black; */
+    /* background-color: rgb(32, 177, 255); */
+    font-size: 2vw;
+    color: purple;
+    background-color: rgb(255, 256, 256);
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    transition: 0.5s;
+    /* border-radius: 0.5em; */
+    cursor: pointer;
+}
+.loginbtn {
+    width: 40%;
+    height: 3em;
+    border-width: 2px;
+    border-color: black;
+    /* background-color: rgb(32, 177, 255); */
+    font-size: large;
+    color: purple;
+    background-color: rgb(255, 256, 256);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    border-radius: 0.5em;
+    cursor: pointer;
+    
+  }
+  .icon{
+    height: 5rem;
+    width:auto;
+    align-items: center;
+  }
+  .check{
+    margin-top: 1em;
+
+  }

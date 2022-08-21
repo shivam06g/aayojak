@@ -1,0 +1,72 @@
+.editbtn {
+    width: auto;
+    height: auto;
+    border-width: 2px;
+    border-color: black;
+    /* background-color: rgb(32, 177, 255); */
+    /* font-size: ; */
+    color: purple;
+    background-color: rgb(255, 256, 256);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    border-radius: 0.5em;
+    cursor: pointer;
+    
+  }
+
+
+  .head{
+    font-family: 'Cinzel', serif;
+    font-size: 1.5vw;
+  color: purple;
+  font-weight: bolder;
+  /* font-stretch: ultra-expanded; */
+  }
+  .head1{
+    /* font-family: 'Cinzel', serif; */
+    font-size: 1.5vw;
+  /* color: black; */
+  /* font-weight: bolder; */
+  font-stretch: ultra-expanded;
+  }
+
+  .editbtn1{
+    width: 40%;
+    height: 3em;
+    border: none;
+    /* border-width: 2px; */
+    /* border-color: black; */
+    /* background-color: rgb(32, 177, 255); */
+    display: flex;
+    font-size: 2vh;
+    color: purple;
+    background-color: rgb(255, 256, 256);
+    transition: 0.5s;
+    /* border-radius: 0.5em; */
+    /* cursor: pointer; */
+    margin :-1vh !important;
+    margin-left: -4vh !important;
+
+  }
+  .editbtn1:hover {
+    transform: scale(1.15);
+  }
+
+  .addbutton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+  }
+
+  .check{
+    height: 2.5vh;
+    width: 2.5vw;
+  }
+
+  .searchbtn{
+    float: right;
+    margin-left: 4vw;
+  }
