@@ -15,7 +15,7 @@ function App() {
             <Route exact path="/" element={<Login />}></Route>
           </Route>
           <Route path="/users" element={<PrivateRoute />}>
-            <Route path="/users" element={<Profile />}></Route>
+            <Route path="/users" ealement={<Profile />}></Route>
           </Route>
           <Route path="/banner" element={<PrivateRoute />}>
             <Route path="/banner" element={<Banner />}></Route>
