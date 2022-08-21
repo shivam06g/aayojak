@@ -8,13 +8,13 @@ import Banner from "./components/Banner";
 import Eventdashboard from "./Pages/Eventdashboard";
 import Eventcanteen from "./Pages/Eventcanteen";
 import Eventaudi from "./Pages/Eventaudi";
-
+import Socialmedia from "./Pages/Socialmedia";
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route exact path="/" element={<PublicRoute />} >
-          <Route exact path="/" element={<Eventaudi/>} ></Route>
+          <Route exact path="/" element={<Socialmedia/>} ></Route>
         </Route>
         <Route path="/users" element={<PrivateRoute />}>
           <Route path="/users" element={<Profile />}></Route>

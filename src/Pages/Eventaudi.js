@@ -118,7 +118,7 @@ export default function Eventaudi() {
                       type="search"
                       placeholder="Search"
                       aria-label="Search"
-                      id="search"
+                      id="search" 
                     />
                   </form>
                 </div>
