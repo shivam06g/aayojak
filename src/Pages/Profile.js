@@ -5,7 +5,7 @@ import "../components/Sidebar";
 import Sidebar from "../components/Sidebar";
 import { useProfile } from "../context/ProfileContext";
 export default function Profile() {
-  const {profile,setProfile}= useProfile()
+  const {profile,setProfile,isopen}= useProfile()
 
   var temp=profile
   temp.path="/users"
@@ -22,10 +22,10 @@ export default function Profile() {
       <div className="row" style={{height:"100vh"}}>
         {/* sidebar */}
 
-        <div className="col-3 sidebar">
+        <div className={isopen ?"col-3 sidebar":""}>
           <Sidebar />
         </div>
-        <div className="col-9">
+        <div className={isopen ?"col-9":"col-12"}>
           {/* profle logo */}
           <div className="row">
             <div className="col-12 profilelogo">
