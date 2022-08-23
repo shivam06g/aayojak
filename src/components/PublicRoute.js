@@ -7,8 +7,8 @@ const PublicRoute = () => {
     console.log("Public route",profile)
     if(profile==null)
     return <Outlet />
-    
-    return <Navigate to="/users"></Navigate>
+
+    return <Navigate to={profile.path}></Navigate>
 }
 
 export default PublicRoute

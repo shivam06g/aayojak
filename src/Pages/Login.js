@@ -8,12 +8,20 @@ import "../css/Login.css";
 export default function Login() {
   // eslint-disable-next-line no-unused-vars
   const {profile,setProfile} = useProfile();
+
+  // var temp=profile
+  // temp.path="/"
+  // // console.log(temp)
+  // setProfile(temp)
+
+
   const [values, setValues] = useState({
     email: "",
     password: "",
     userType: "",
     error: "",
     doRedirect: false,
+    path:"/users",
   });
 
   // eslint-disable-next-line no-unused-vars

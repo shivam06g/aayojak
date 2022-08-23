@@ -1,9 +1,16 @@
 import React from 'react'
+import { useProfile } from '../context/ProfileContext';
 import '../css/Banner.css'
 import home2 from '../image/home2.png'
 import wav1 from '../image/wave1.png'
 export default function Banner() {
+  const {profile,setProfile}= useProfile();
+  var temp=profile
+  temp.path="/banner"
+  // console.log(temp)
+  setProfile(temp)
   return (
+    
     <div>
       <div className="banner">
         <div className="container">
