@@ -1,5 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
+import { ProfileProvider } from "./context/ProfileContext";
 
-ReactDOM.render(<App/>, document.getElementById("root"));
+ReactDOM.render(<ProfileProvider>
+<App/>
+</ProfileProvider>
+, document.getElementById("root"));
