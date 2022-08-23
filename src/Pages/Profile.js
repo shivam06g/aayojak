@@ -3,7 +3,14 @@ import Navbar from "../components/Navbar";
 import "../css/Profile.css";
 import "../components/Sidebar";
 import Sidebar from "../components/Sidebar";
+import { useProfile } from "../context/ProfileContext";
 export default function Profile() {
+  const {profile,setProfile}= useProfile()
+  var temp=profile
+  temp.path="/users"
+  // console.log(temp)
+  setProfile(temp)
+
   return (
     <div>
       <div className="row">
