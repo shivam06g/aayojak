@@ -7,7 +7,7 @@ export default function Banner() {
     <div>
       <div className="banner">
         <div className="row">
-          <div className="col-lg-5 loginpage con">
+          <div className="col-lg-5 loginpage con hide">
             <p className="promo-title">Aayojak</p>
           </div>
           <div className="col-lg-7 abccc">

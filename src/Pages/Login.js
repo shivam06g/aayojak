@@ -105,10 +105,10 @@ export default function Login() {
             id="userType"
             onChange={(e) => handleChange(e, "userType")}
           >
-            <option value="">Select user Type</option>
-            <option value="aicte">AICTE Admin</option>
-            <option value="institute">Insitute SPOC</option>
-            <option value="faculty">Factulty</option>
+            <option value=""className="aa" >Select user Type</option>
+            <option value="aicte" className="aa">AICTE Admin</option>
+            <option value="institute"className="aa">Insitute SPOC</option>
+            <option value="faculty" className="aa">Factulty</option>
           </select>
          
           {/* </div>        */}

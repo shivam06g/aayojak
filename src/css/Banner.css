@@ -31,3 +31,13 @@
 .abccc{
   margin-top: 9vh;
 }
+
+@media (max-width:1000px){
+  .hide{
+    display: none;
+  }
+  .banner{
+    height: 100vh;
+    overflow: hidden;
+  }
+}

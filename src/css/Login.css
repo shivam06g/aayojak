@@ -4,7 +4,6 @@
 }
 
 .page {
- 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,7 +13,7 @@
   /* background-size:cover; */
   /* background-repeat:no-repeat; */
   background-color: rgb(255, 248, 241);
-  width: 55%;
+  width: 55% ;
   height: 80vh;
   position: relative;
   border-radius: 2em;
@@ -25,8 +24,8 @@
   justify-content: space-around;
 }
 .headinglogin {
-    font-family: 'Cinzel', serif;
-    /* font-family: 'Lobster', cursive; */
+  font-family: "Cinzel", serif;
+  /* font-family: 'Lobster', cursive; */
   font-size: 4vh;
   color: purple;
   font-weight: bolder;
@@ -38,18 +37,18 @@
   display: flex;
   justify-content: space-around;
 }
-.select1{
-    border: none;
-    background-color: rgb(229, 229, 229);
-    height: 8vh;
-    width: 80%;
-    border-radius: 0.75em;
-    text-align: center;
-    
+.select1 {
+  border: none;
+  background-color: rgb(229, 229, 229);
+  height: 8vh;
+  width: 80%;
+  border-radius: 0.75em;
+  text-align: center;
+
   font-size: 1.3vw;
   /* padding: 2em; */
 }
-input{
+input {
   border: none;
   background-color: rgb(229, 229, 229);
   height: 8vh;
@@ -68,8 +67,8 @@ input:focus {
   height: 2em;
   border-width: 2px;
   border-color: rgb(255, 255, 255);
-  background-color: #AF7AB3;
-  font-size:large;
+  background-color: #af7ab3;
+  font-size: large;
   color: #fff;
   display: flex;
   justify-content: center;
@@ -105,4 +104,45 @@ input:focus {
   height: 100px;
   width: 100px;
   border-radius: 130px;
+}
+@media (max-width: 1600px) {
+  .cover {
+    width: 70%;
+  }
+}
+@media (max-width: 1601px) {
+  .cover {
+    width: 55%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .cover {
+    width: 70%;
+  }
+}
+
+@media (max-width: 1000px) {
+  input {
+    /* width:80%; */
+    font-size: 4vw;
+    height: 10vh;
+  }
+  .select1 {
+    /* width: 80%; */
+    font-size: 4vw;
+    height:10vh;
+  }
+  .aa{
+   background: transparent;
+   width: 20px;
+   padding: 5px;
+   font-size: 2vw;
+   line-height: 1;
+   -webkit-appearance: none;
+  }
+  .loginbtn{
+    height:4 em;
+    font-size:4vw;
+  }
 }
