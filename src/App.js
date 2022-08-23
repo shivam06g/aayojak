@@ -53,7 +53,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route exact path="/" element={<PublicRoute />}>
-          <Route exact path="/" element={<Profile/>}></Route>
+          <Route exact path="/" element={<Banner/>}></Route>
         </Route>
         <Route path="/users" element={<PrivateRoute />}>
           <Route path="/users" element={<Profile />}></Route>
