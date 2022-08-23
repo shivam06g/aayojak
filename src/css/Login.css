@@ -4,11 +4,7 @@
 }
 
 .page {
-  background-image: url(../image/bg3.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 100vh;
-  width: 100%;
+ 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,11 +14,11 @@
   /* background-size:cover; */
   /* background-repeat:no-repeat; */
   background-color: rgb(255, 248, 241);
-  width: 30em;
-  height: 35em;
+  width: 55%;
+  height: 80vh;
   position: relative;
   border-radius: 2em;
-  box-shadow: 0 0.188em 1.55em rgb(156, 156, 156);
+  box-shadow: 0 2em 2em rgb(0, 0, 0);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -31,54 +27,57 @@
 .headinglogin {
     font-family: 'Cinzel', serif;
     /* font-family: 'Lobster', cursive; */
-  font-size: 3em;
+  font-size: 4vh;
   color: purple;
   font-weight: bolder;
   font-stretch: ultra-expanded;
 }
 .altlogin {
   width: 80%;
-  height: 3em;
+  height: 4vh;
   display: flex;
   justify-content: space-around;
 }
 .select1{
     border: none;
     background-color: rgb(229, 229, 229);
-    height: 3em;
+    height: 8vh;
     width: 80%;
     border-radius: 0.75em;
     text-align: center;
+    
+  font-size: 1.3vw;
   /* padding: 2em; */
 }
 input{
   border: none;
   background-color: rgb(229, 229, 229);
-  height: 3em;
+  height: 8vh;
   width: 80%;
   border-radius: 0.75em;
   text-align: center;
+  font-size: 1.3vw;
   /* padding: 2em;/ */
 }
 input:focus {
   outline-color: rgb(32, 177, 255);
 }
 .loginbtn {
-  width: 40%;
-  height: 3em;
+  /* font-family: 'Cinzel', serif;/ */
+  width: 80%;
+  height: 2em;
   border-width: 2px;
-  border-color: black;
-  /* background-color: rgb(32, 177, 255); */
-  font-size: large;
-  color: purple;
-  background-color: rgb(255, 256, 256);
+  border-color: rgb(255, 255, 255);
+  background-color: #AF7AB3;
+  font-size:large;
+  color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: 0.5s;
-  border-radius: 0.5em;
+  border-radius: 10px;
   cursor: pointer;
-  
+  font-weight: 600;
 }
 
 .loginbtn:hover {

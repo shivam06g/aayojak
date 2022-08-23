@@ -2,7 +2,10 @@ import React, { useState } from "react";
 import { Navigate } from "react-router-dom";
 import { useProfile } from "../context/ProfileContext";
 import "../css/Navbar.css";
+<<<<<<< HEAD
 
+=======
+>>>>>>> 92d4817a155048dc147d9e1425534e2d249260af
 import logo from "../logo/Aayojak-logos (1)/Aayojak-logos_white.png";
 export default function Navbar() {
   // eslint-disable-next-line no-unused-vars

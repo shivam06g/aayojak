@@ -3,7 +3,7 @@ import { Navigate } from "react-router-dom";
 import { useProfile } from "../context/ProfileContext";
 import "../css/Login.css";
 // eslint-disable-next-line no-unused-vars
-// import profile from "../logo/Aayojak-logos/Aayojak-1.jpg";
+import profileimage from "../logo/Aayojak-logos/Aayojak-1.jpg";
 
 export default function Login() {
   // eslint-disable-next-line no-unused-vars
@@ -84,14 +84,14 @@ export default function Login() {
     }
   };
 
-  const LoginForm = () => {
+    const LoginForm = () => {
     if (doRedirect === true) return <Navigate to="/users"></Navigate>;
     return (
       <div className="page">
         <div className="cover">
           <div className="imgs">
             <div className="container-image">
-              <img  alt="profile" className="profile" />
+              <img  alt="profile" className="profile" src={profileimage} />
             </div>
           </div>
           <h1 className="headinglogin">Login</h1>
@@ -133,3 +133,4 @@ export default function Login() {
 
   return <>{LoginForm()}</>;
 }
+
