@@ -1,10 +1,13 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
+import { useProfile } from '../context/ProfileContext';
 import "../css/Sidebar.css"
 import profile from "../logo/Aayojak-logos/Aayojak-1.jpg";
 export default function Sidebar() {
+  const {isopen}= useProfile();
+  console.log(isopen);
   return (
-    <div>
+    <div style={{display : isopen===false ? "none" : ""}}>
           <div className="row">
             <div className="col-12">
               <div className="imgs">
