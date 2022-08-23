@@ -42,35 +42,16 @@ function App() {
   }
 
   return (
-<<<<<<< HEAD
     <BrowserRouter>
       <Routes>
         <Route exact path="/" element={<PublicRoute />}>
-          <Route exact path="/" element={<Login />}></Route>
+          <Route exact path="/" element={<Banner />}></Route>
         </Route>
         <Route path="/users" element={<PrivateRoute />}>
           <Route path="/users" element={<Profile />}></Route>
         </Route>
-        <Route path="/banner" element={<PrivateRoute />}>
-          <Route path="/banner" element={<Banner />}></Route>
-        </Route>
       </Routes>
     </BrowserRouter>
-=======
-      <BrowserRouter>
-        <Routes>
-          <Route exact path="/" element={<PublicRoute />}>
-            <Route exact path="/" element={<Banner/>}></Route>
-          </Route>
-          <Route path="/users" element={<PrivateRoute />}>
-            <Route path="/users" element={<Profile />}></Route>
-          </Route>
-          <Route path="/banner" element={<PrivateRoute />}>
-            <Route path="/banner" element={<Banner />}></Route>
-          </Route>
-        </Routes>
-      </BrowserRouter>
->>>>>>> 92d4817a155048dc147d9e1425534e2d249260af
   );
 }
 

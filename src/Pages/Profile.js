@@ -11,7 +11,6 @@ export default function Profile() {
   // console.log(temp)
   setProfile(temp)
 
-  
   return (
     <div>
       <div className="row">
