@@ -1,16 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "../components/Navbar";
 import "../css/Profile.css";
 import "../components/Sidebar";
 import Sidebar from "../components/Sidebar";
 import { useProfile } from "../context/ProfileContext";
 export default function Profile() {
-  const {profile,setProfile,isopen}= useProfile()
+  const { profile, setProfile, isopen } = useProfile();
 
-  var temp=profile
-  temp.path="/users"
-  // console.log(temp)
-  setProfile(temp)
+  useEffect(() => {
+    var temp = profile;
+    temp.path = "/users";
+    // console.log(temp)
+    setProfile(temp);
+  }, [profile, setProfile]);
 
   return (
     <div>
@@ -19,13 +21,13 @@ export default function Profile() {
           <Navbar />
         </div>
       </div>
-      <div className="row" style={{height:"100vh"}}>
+      <div className="row" style={{ height: "100vh" }}>
         {/* sidebar */}
 
-        <div className={isopen ?"col-3 sidebar":""}>
+        <div className={isopen ? "col-3 sidebar" : ""}>
           <Sidebar />
         </div>
-        <div className={isopen ?"col-9":"col-12"}>
+        <div className={isopen ? "col-9" : "col-12"}>
           {/* profle logo */}
           <div className="row">
             <div className="col-12 profilelogo">

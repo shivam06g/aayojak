@@ -1,4 +1,5 @@
 /* eslint-disable no-unused-vars */
+import { useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import PrivateRoute from "./components/PrivateRoute";
@@ -19,6 +20,27 @@ import Eventdashboard from "./Pages/Eventdashboard";
 function App() {
   const {profile,setProfile}= useProfile(); 
 
+  useEffect(() => {
+    window.onload = function()
+    {
+      const cookie= document.cookie;
+      console.log(cookie)
+      var index= cookie.indexOf('}')
+      console.log(index)
+      // {"email":"gg@kuk.ac.in","password":"h123","userType":"faculty","error":false,"doRedirect":false}; expires=8/23/2022, 3:04:21 PM
+      if(index===-1)
+      {
+        setProfile(null)
+      }
+      else{
+      let result = cookie.substring(0, index+1);
+      console.log(JSON.parse(result))
+       setProfile(JSON.parse(result))
+      console.log(profile)
+      }
+    }
+  }, [profile,setProfile])
+  
   window.onbeforeunload = function()
   {
     var now = new Date();
@@ -30,24 +52,7 @@ function App() {
     document.cookie = "expires=" + now.toLocaleString(undefined,{timeZone:'Asia/kolkata'}) + ";"
   };
 
-  window.onload = async function()
-  {
-    const cookie= document.cookie;
-    console.log(cookie)
-    var index= cookie.indexOf('}')
-    console.log(index)
-    // {"email":"gg@kuk.ac.in","password":"h123","userType":"faculty","error":false,"doRedirect":false}; expires=8/23/2022, 3:04:21 PM
-    if(index===-1)
-    {
-      setProfile(null)
-    }
-    else{
-    let result = cookie.substring(0, index+1);
-    console.log(JSON.parse(result))
-     setProfile(JSON.parse(result))
-    console.log(profile)
-    }
-  }
+ 
 
   return (
     <BrowserRouter>
@@ -57,6 +62,15 @@ function App() {
         </Route>
         <Route path="/users" element={<PrivateRoute />}>
           <Route path="/users" element={<Profile />}></Route>
+        </Route>
+        <Route path="/events" element={<PrivateRoute />}>
+          <Route path="/events" element={<Eventmain />}></Route>
+        </Route>
+        <Route path="/socialmedia" element={<PrivateRoute />}>
+          <Route path="/socialmedia" element={<Socialmedia />}></Route>
+        </Route>
+        <Route path="/email" element={<PrivateRoute />}>
+          <Route path="/email" element={<Eventdashboard />}></Route>
         </Route>
       </Routes>
     </BrowserRouter>
