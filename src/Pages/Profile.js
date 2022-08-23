@@ -6,6 +6,7 @@ import Sidebar from "../components/Sidebar";
 import { useProfile } from "../context/ProfileContext";
 export default function Profile() {
   const {profile,setProfile}= useProfile()
+
   var temp=profile
   temp.path="/users"
   // console.log(temp)
