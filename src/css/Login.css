@@ -1,12 +1,16 @@
 * {
   margin: 0;
   /* box-sizing: border-box; */
+  /* overflow: hidden; */
 }
 
 .page {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+body::-webkit-scrollbar {
+  display: none;
 }
 .cover {
   /* background-image: url(../image/bg1.jfif); */
@@ -61,22 +65,22 @@ input {
 input:focus {
   outline-color: rgb(32, 177, 255);
 }
-.loginbtn {
+.loginbtn{
   /* font-family: 'Cinzel', serif;/ */
-  width: 80%;
-  height: 2em;
-  border-width: 2px;
-  border-color: rgb(255, 255, 255);
-  background-color: #af7ab3;
-  font-size: large;
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 0.5s;
-  border-radius: 10px;
-  cursor: pointer;
-  font-weight: 600;
+  width: 80% !important;
+  height: 3em !important;
+  border-width: 2px !important;
+  border-color: rgb(255, 255, 255) !important;
+  background-color: #af7ab3 !important;
+  font-size: large !important;
+  color: #fff !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  transition: 0.5s !important;
+  border-radius: 10px !important;
+  cursor: pointer !important;
+  font-weight: 600 !important;
 }
 
 .loginbtn:hover {
@@ -125,12 +129,12 @@ input:focus {
 @media (max-width: 1000px) {
   input {
     /* width:80%; */
-    font-size: 4vw;
+    font-size: 5vw;
     height: 10vh;
   }
   .select1 {
     /* width: 80%; */
-    font-size: 4vw;
+    font-size: 5vw;
     height:10vh;
   }
   .aa{

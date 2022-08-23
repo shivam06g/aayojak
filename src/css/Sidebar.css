@@ -21,15 +21,15 @@
     width: 115px;
   }
   .profile {
-    height: 100px;
-    width: 100px;
+    height: 80p;
+    width: 80px;
     border-radius: 130px;
   }
 
   .username {
     font-family: 'Cinzel', serif;
     /* font-family: 'Lobster', cursive; */
-  font-size: 3vw;
+  font-size: 5vw;
   color: purple;
   font-weight: bolder;
   font-stretch: ultra-expanded;
@@ -43,7 +43,13 @@
     justify-content: center;
     align-items: center;
     color:purple;
-    font-size: 3vm;
+    font-size: 2vw;
     font-weight: 700;
     margin: 8px;
+}
+
+@media (max-width:800){
+  .link{
+    font-size: 5vw;
+  }
 }

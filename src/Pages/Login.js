@@ -98,13 +98,13 @@ export default function Login() {
           <input
             type="email"
             onChange={(e) => handleChange(e, "email")}
-            placeholder="email"
+            placeholder="Email id"
             value={email}
           />
           <input
             type="password"
             onChange={(e) => handleChange(e, "password")}
-            placeholder="password"
+            placeholder="Password"
             value={password}
           />
           {/* <div class="form-group"> */}
@@ -116,7 +116,7 @@ export default function Login() {
             <option value=""className="aa" >Select user Type</option>
             <option value="aicte" className="aa">AICTE Admin</option>
             <option value="institute"className="aa">Insitute SPOC</option>
-            <option value="faculty" className="aa">Factulty</option>
+            <option value="faculty" className="aa">Faculty</option>
           </select>
          
           {/* </div>        */}

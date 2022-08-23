@@ -1,12 +1,20 @@
+/* eslint-disable no-unused-vars */
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import PrivateRoute from "./components/PrivateRoute";
 import PublicRoute from "./components/PublicRoute";
-import Login from "./Pages/Login";
 import Profile from "./Pages/Profile";
 import Banner from "./components/Banner";
 import { useProfile } from "./context/ProfileContext";
 // import { ProfileProvider } from "./context/ProfileContext";
+import Eventmain from './Pages/Eventmain'
+import EventForm from './Pages/EventForm'
+import Eventcanteen from './Pages/Eventcanteen'
+import Eventaudi from './Pages/Eventaudi'
+import Socialmedia from './Pages/Socialmedia'
+import Eventdashboard from "./Pages/Eventdashboard";
+
+
 
 function App() {
   const {profile,setProfile}= useProfile(); 
@@ -45,7 +53,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route exact path="/" element={<PublicRoute />}>
-          <Route exact path="/" element={<Banner />}></Route>
+          <Route exact path="/" element={<Banner/>}></Route>
         </Route>
         <Route path="/users" element={<PrivateRoute />}>
           <Route path="/users" element={<Profile />}></Route>
