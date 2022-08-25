@@ -6,12 +6,35 @@ import Sidebar from "../components/Sidebar";
 import { useProfile } from "../context/ProfileContext";
 import "../css/Eventmain.css";
 
-async function getAllEvents(id)
-{
-    let res = await fetch('http://localhost/')
-}
 
 export default function Eventmain() {
+
+async function getAllEvents(id)
+{
+  let res;
+
+  try{
+    res = await fetch(`http://localhost:3100/events/getAllConfirmedEvents/62f206fb51f34884e7a6f35b`,{
+      method:"GET",
+      headers:{
+        Accept: "application/json",
+      }
+    })
+    // console.log(res)
+  }
+  catch(err){
+    console.log(err)
+  }
+
+    return res.json();
+}
+
+  getAllEvents("62f206fb51f34884e7a6f35b").then((res)=>{
+    console.log(res)
+  })
+
+  
+    
   const { profile, setProfile,isopen} = useProfile();
   useEffect(() => {
     var temp = profile;
@@ -20,8 +43,9 @@ export default function Eventmain() {
     setProfile(temp);
   }, [profile, setProfile]);
 
-  let approvedEvents = getAllEvents("62f206fb51f34884e7a6f35b")
+ 
   return (
+
     <div>
       <div className="row">
         <div className="col-12">
