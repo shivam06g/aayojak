@@ -25,7 +25,7 @@ function App() {
     {
       const cookie= document.cookie;
       console.log(cookie)
-      var index= cookie.indexOf('}')
+      var index= cookie.lastIndexOf('}')
       console.log(index)
       // {"email":"gg@kuk.ac.in","password":"h123","userType":"faculty","error":false,"doRedirect":false}; expires=8/23/2022, 3:04:21 PM
       if(index===-1)
@@ -71,6 +71,9 @@ function App() {
         </Route>
         <Route path="/email" element={<PrivateRoute />}>
           <Route path="/email" element={<Eventdashboard />}></Route>
+        </Route>
+        <Route path="/createEvent" element={<PrivateRoute />}>
+          <Route path="/createEvent" element={<EventForm />}></Route>
         </Route>
       </Routes>
     </BrowserRouter>

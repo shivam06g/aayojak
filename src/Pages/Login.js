@@ -3,7 +3,7 @@ import { Navigate } from "react-router-dom";
 import { useProfile } from "../context/ProfileContext";
 import "../css/Login.css";
 // eslint-disable-next-line no-unused-vars
-import profileimage from "../logo/Aayojak-logos/Aayojak-1.jpg";
+import profileimage from "../logo/Aayojak-logos/aayojaklogo1.jpg";
 
 export default function Login() {
   // eslint-disable-next-line no-unused-vars
@@ -56,12 +56,7 @@ export default function Login() {
     }
   };
 
-  const authenticate = (data) => {
-    console.log(data);
-    if (typeof window !== "undefined") {
-      localStorage.setItem("jwt", JSON.stringify(data));
-    }
-  };
+  
 
   const onSubmit = async (event) => {
     event.preventDefault();
@@ -73,12 +68,12 @@ export default function Login() {
       setValues({ ...values, error: data.error, loading: false });
       alert(data.error);
     } else {
-      authenticate(data);
+      // authenticate(data);
       setValues({
         ...values,
         doRedirect: true,
       });
-      setProfile({...values});
+      setProfile({...data});
       // alert("signin success");
       // <Navigate to="/users"></Navigate>
     }
@@ -113,10 +108,11 @@ export default function Login() {
             id="userType"
             onChange={(e) => handleChange(e, "userType")}
           >
-            <option value=""className="aa" >Select user Type</option>
+            {/* <option value=""className="aa" >Select user Type</option> */}
+            <option value="faculty" className="aa">Faculty</option>
             <option value="aicte" className="aa">AICTE Admin</option>
             <option value="institute"className="aa">Insitute SPOC</option>
-            <option value="faculty" className="aa">Faculty</option>
+            
           </select>
          
           {/* </div>        */}

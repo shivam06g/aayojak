@@ -1,4 +1,6 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { Navigate } from "react-router";
+import { NavLink } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
 import { useProfile } from "../context/ProfileContext";
@@ -6,13 +8,13 @@ import "../css/Eventmain.css";
 
 export default function Eventmain() {
   const { profile, setProfile,isopen} = useProfile();
-
   useEffect(() => {
     var temp = profile;
     temp.path = "/events";
     // console.log(temp)
     setProfile(temp);
   }, [profile, setProfile]);
+
 
   return (
     <div>
@@ -33,9 +35,9 @@ export default function Eventmain() {
               <h1>Events</h1>
             </div>
             <div className="col-2 faviconplus">
-              <a href="/">
-                <i className="fa fa-plus-circle fa-3x" aria-hidden="true"></i>
-              </a>
+              <NavLink to="/createEvent">
+                <i className="fa fa-plus-circle fa-3x" aria-hidden="true" ></i>
+              </NavLink>
             </div>
           </div>
 
