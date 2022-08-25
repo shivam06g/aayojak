@@ -17,21 +17,18 @@ export default function Sidebar() {
               </div>
               <h1 className="username">John Smith</h1>
               <hr />
-              <NavLink to="/banner" className="link">
-                banner
-              </NavLink>
-              <a href="/" className="link">
+              <NavLink to="/users" className="link">
                 Profile
-              </a>
-              <a href="/" className="link">
-                Event
-              </a>
-              <a href="/" className="link">
-                About
-              </a>
-              <a href="/" className="link">
-                Contact
-              </a>
+              </NavLink>
+              <NavLink to="/events" className="link">
+                Events
+              </NavLink>
+              <NavLink to="/socialmedia" className="link">
+                Socialmedia
+              </NavLink>
+              <NavLink to="/email" className="link">
+                Email
+              </NavLink>
             </div>
           </div>
         </div>

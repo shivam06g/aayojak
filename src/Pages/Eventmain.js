@@ -1,8 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
+import { useProfile } from "../context/ProfileContext";
 import "../css/Eventmain.css";
+
 export default function Eventmain() {
+  const { profile, setProfile,isopen} = useProfile();
+
+  useEffect(() => {
+    var temp = profile;
+    temp.path = "/events";
+    // console.log(temp)
+    setProfile(temp);
+  }, [profile, setProfile]);
+
   return (
     <div>
       <div className="row">
@@ -12,11 +23,11 @@ export default function Eventmain() {
       </div>
 
       <div className="row ">
-        <div className="col-3 sidebar">
+        <div className={isopen ?"col-3 sidebar":""}>
           <Sidebar />
         </div>
 
-        <div className="col-9">
+        <div className={isopen ?"col-9":"col-12"}>
           <div className="row">
             <div className="col-10 profilelogo">
               <h1>Events</h1>

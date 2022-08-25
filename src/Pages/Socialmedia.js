@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Mininavbar from "../components/Mininavbar";
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
+import { useProfile } from "../context/ProfileContext";
 import "../css/Socialmedia.css";
 
 import facebook from "../image/facebook-icon.png";
@@ -10,6 +11,18 @@ import linkedin from "../image/linkedin-icon.png";
 import twitter from "../image/twitter-icon.png";
 
 export default function Socialmedia() {
+
+  
+  const { profile, setProfile,isopen} = useProfile();
+
+  useEffect(() => {
+    var temp = profile;
+    temp.path = "/socialmedia";
+    // console.log(temp)
+    setProfile(temp);
+  }, [profile, setProfile]);
+
+
   const myHandler = (events) => {
     console.log(events.target.files[0]);
   };
@@ -23,11 +36,11 @@ export default function Socialmedia() {
       </div>
 
       <div className="row" style={{ height: "100vh" }}>
-        <div className="col-3 sidebar">
+        <div className={isopen ?"col-3 sidebar":""}>
           <Sidebar />
         </div>
 
-        <div className="col-9">
+        <div className={isopen ?"col-9":"col-12"}>
           <Mininavbar />
 
           <div className="row">
@@ -65,7 +78,7 @@ export default function Socialmedia() {
                     aria-label="Checkbox"
                     className="check"
                   /></div>
-                <div className="col-5 head"><img src={facebook} className="icon"/></div>
+                <div className="col-5 head"><img src={facebook} alt="" className="icon"/></div>
                 {/* <div className="col-1 head">#</div> */}
               </div>
               <hr />
@@ -75,7 +88,7 @@ export default function Socialmedia() {
                     aria-label="Checkbox"
                     className="check"
                   /></div>
-                <div className="col-5 head"><img src={instagram} className="icon"/></div>
+                <div className="col-5 head"><img src={instagram} alt="" className="icon"/></div>
                 {/* <div className="col-1 head">#</div> */}
               </div>
               <hr /><div className="row">
@@ -84,7 +97,7 @@ export default function Socialmedia() {
                     aria-label="Checkbox"
                     className="check"
                   /></div>
-                <div className="col-5 head"><img src={linkedin} className="icon"/></div>
+                <div className="col-5 head"><img src={linkedin} alt="" className="icon"/></div>
                 {/* <div className="col-1 head">#</div> */}
               </div>
               <hr /><div className="row">
@@ -93,7 +106,7 @@ export default function Socialmedia() {
                     aria-label="Checkbox"
                     className="check"
                   /></div>
-                <div className="col-5 head"><img src={twitter} className="icon"/></div>
+                <div className="col-5 head"><img src={twitter}  alt="" className="icon"/></div>
                 {/* <div className="col-1 head">#</div> */}
               </div>
               <hr />
