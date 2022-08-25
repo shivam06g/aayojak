@@ -1,8 +1,70 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { Navigate } from "react-router";
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
+import { useProfile } from "../context/ProfileContext";
 import "../css/Eventform.css";
 export default function EventForm() {
+  const { profile, setProfile, isopen } = useProfile();
+
+  useEffect(() => {
+    var temp = profile;
+    temp.path = "/createEvent";
+    // console.log(temp)
+    setProfile(temp);
+  }, [profile, setProfile]);
+
+  const [navi,setnavi]=useState(false);
+  const [values, setValues] = useState({
+    userid: profile.user._id,
+    title: "None",
+    eventname: "",
+    eventdetail: "",
+    eventdate: "",
+    organisation: "AICTE",
+    location: "",
+    noofparticipants: "",
+    duration: 1,
+    auditoriumid: "62f3fd84d1d24b368b06cbf6",
+    canteenid: "62f3fd84d1d24b368b06cbf6",
+    typeOfEvent: "",
+    eventexpenditure: "",
+    instituteid:"c407",
+    tada: "",
+    other: "",
+    total: "500",
+  });
+
+  const handleChange = (event, name) => {
+    setValues({ ...values, error: false, [name]: event.target.value });
+  };
+
+  const submit = async(e) => {
+    e.preventDefault();
+    // console.log(JSON.stringify(values))
+    const data = await fetch('http://localhost:3100/events/byAicte',{
+      method:"POST",
+      headers:{
+        Accept: "application/json",
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify(values)
+    })
+    .then((res)=>{
+         return res.json();
+    })
+    .catch((error)=>{
+         console.log(error);
+    })
+    setnavi(true);
+    // console.log(data);
+
+  };
+
+  // console.log("Create event page", profile);
+
+  if(navi===true)
+    return <Navigate to="/events"></Navigate>
   return (
     <div>
       <div className="row">
@@ -28,101 +90,6 @@ export default function EventForm() {
           </div>
 
           <div className="row">
-            <div className="col-10 profilelogo">
-              <h1>Details of coordinator</h1>
-            </div>
-          </div>
-
-          <div className="row">
-            <div className=" col-12">
-              <div className="container">
-                <form>
-                  <div className="form-row">
-                    <div className=" form-group  col">
-                      <label>First Name</label>
-                      <input
-                        type="text"
-                        className="form-control"
-                        placeholder="First name"
-                      />
-                    </div>
-                    <div className="form-group col">
-                      <label>Last Name</label>
-                      <input
-                        type="text"
-                        className="form-control"
-                        placeholder="Last name"
-                      />
-                    </div>
-                  </div>
-                  <div className="form-row">
-                    <div className="form-group col-md-6">
-                      <label htmlFor="inputEmail4">Email</label>
-                      <input
-                        type="email"
-                        className="form-control"
-                        id="inputEmail4"
-                        placeholder="Email"
-                      />
-                    </div>
-                    <div className="form-group col-md-6">
-                      <label htmlFor="inputEmail4">Faculty ID</label>
-                      <input
-                        type="text"
-                        className="form-control"
-                        id="inputEmail4"
-                        placeholder="id"
-                      />
-                    </div>
-                  </div>
-                  <div className="form-group">
-                    <label htmlFor="inputAddress">Address</label>
-                    <input
-                      type="text"
-                      className="form-control"
-                      id="inputAddress"
-                      placeholder="1234 Main St"
-                    />
-                  </div>
-                  <div className="form-row">
-                    <div className="form-group col-md-6">
-                      <label htmlFor="inputCity">City</label>
-                      <input
-                        type="text"
-                        className="form-control"
-                        id="inputCity"
-                      />
-                    </div>
-                    <div className="form-group col-md-4">
-                      <label htmlFor="inputState">State</label>
-
-                      <input
-                        type="text"
-                        className="form-control"
-                        id="inputState"
-                      />
-                    </div>
-                    <div className="form-group col-md-2">
-                      <label htmlFor="inputZip">Zip</label>
-                      <input
-                        type="text"
-                        className="form-control"
-                        id="inputZip"
-                      />
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-
-          <div className="row">
-            <div className="col-10 profilelogo">
-              <h1>Event info</h1>
-            </div>
-          </div>
-
-          <div className="row">
             <div className=" col-12">
               <div className="container">
                 <form>
@@ -131,8 +98,21 @@ export default function EventForm() {
                       <label>Event name</label>
                       <input
                         type="text"
+                        onChange={(e) => handleChange(e, "eventname")}
                         className="form-control"
                         placeholder="Event name"
+                      />
+                    </div>
+                  </div>
+                  <div className="form-row">
+                    <div className="form-group col-md">
+                      <label htmlFor="birthday">Type of Event</label>
+                      <input
+                        type="text"
+                        onChange={(e) => handleChange(e, "typeOfEvent")}
+                        className="form-control"
+                        id="typeofevent"
+                        name="typeofevent"
                       />
                     </div>
                   </div>
@@ -143,6 +123,7 @@ export default function EventForm() {
                       </label>
                       <textarea
                         className="form-control"
+                        onChange={(e) => handleChange(e, "eventdetail")}
                         id="Eventdetail"
                         rows="3"
                       ></textarea>
@@ -153,27 +134,24 @@ export default function EventForm() {
                       <label htmlFor="birthday">Event date</label>
                       <input
                         type="date"
+                        onChange={(e) => handleChange(e, "eventdate")}
                         className="form-control"
                         id="date"
                         name="date"
                       />
                     </div>
-                    <div className="col">
-                      <label>Mobile No.</label>
-                      <input
-                        type="text"
-                        className="form-control"
-                        placeholder="phone number"
-                      />
-                    </div>
                   </div>
+
                   <div className="form-row">
-                    <div className="form-group col">
-                      <label>Organisation/Institute/College</label>
+                    <div className="form-group col-md">
+                      <label htmlFor="birthday">Location</label>
                       <input
                         type="text"
+                        onChange={(e) => handleChange(e, "location")}
                         className="form-control"
-                        placeholder="Organisation"
+                        id="location"
+                        name="location"
+                        placeholder="Location of Event i.e City"
                       />
                     </div>
                   </div>
@@ -182,6 +160,7 @@ export default function EventForm() {
                       <label>Number of participants</label>
                       <input
                         type="number"
+                        onChange={(e) => handleChange(e, "noofparticipants")}
                         className="form-control"
                         placeholder="no. of participants"
                       />
@@ -190,16 +169,52 @@ export default function EventForm() {
                       <label>Duration</label>
                       <input
                         type="number"
+                        onChange={(e) => handleChange(e, "duration")}
                         className="form-control"
                         placeholder="no of days"
                       />
                     </div>
                   </div>
-                  <button type="submit" className=" logutbtn btn btn-primary">
-                    Submit
-                  </button>
                 </form>
               </div>
+            </div>
+          </div>
+          <div className="row">
+            <div className=" col-12">
+              <div className="container">
+                <form>
+                  <div className="form-row">
+                    <div className=" form-group  col">
+                      <label>Anticipated Expenditure</label>
+                      <input
+                        type="text"
+                        onChange={(e) => handleChange(e, "eventexpenditure")}
+                        className="form-control align my-3"
+                        placeholder="Pre-event expenditure"
+                      />
+                      <input
+                        type="text"
+                        onChange={(e) => handleChange(e, "tada")}
+                        className="form-control align my-3"
+                        placeholder="TA and DA"
+                      />
+                      <input
+                        type="text"
+                        onChange={(e) => handleChange(e, "other")}
+                        className="form-control align my-3"
+                        placeholder="Other"
+                      />
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <button
+                type="submit"
+                className=" submitbtn btn btn-primary padd"
+                onClick={(e) => submit(e)}
+              >
+                Submit
+              </button>
             </div>
           </div>
         </div>

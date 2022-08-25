@@ -10,7 +10,7 @@ export default function Navbar() {
   const [logout_status,change]=useState(false);
   const logout=()=>{
     setProfile(null)
-    localStorage.removeItem('jwt')
+    // localStorage.removeItem('jwt')
     change(true);
   }
 

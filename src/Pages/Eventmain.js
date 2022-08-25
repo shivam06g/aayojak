@@ -1,12 +1,41 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { Navigate } from "react-router";
+import { NavLink } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
 import { useProfile } from "../context/ProfileContext";
 import "../css/Eventmain.css";
 
-export default function Eventmain() {
-  const { profile, setProfile,isopen} = useProfile();
 
+export default function Eventmain() {
+
+async function getAllEvents(id)
+{
+  let res;
+
+  try{
+    res = await fetch(`http://localhost:3100/events/getAllConfirmedEvents/62f206fb51f34884e7a6f35b`,{
+      method:"GET",
+      headers:{
+        Accept: "application/json",
+      }
+    })
+    // console.log(res)
+  }
+  catch(err){
+    console.log(err)
+  }
+
+    return res.json();
+}
+
+  getAllEvents("62f206fb51f34884e7a6f35b").then((res)=>{
+    console.log(res)
+  })
+
+  
+    
+  const { profile, setProfile,isopen} = useProfile();
   useEffect(() => {
     var temp = profile;
     temp.path = "/events";
@@ -14,7 +43,9 @@ export default function Eventmain() {
     setProfile(temp);
   }, [profile, setProfile]);
 
+ 
   return (
+
     <div>
       <div className="row">
         <div className="col-12">
@@ -33,9 +64,9 @@ export default function Eventmain() {
               <h1>Events</h1>
             </div>
             <div className="col-2 faviconplus">
-              <a href="/">
-                <i className="fa fa-plus-circle fa-3x" aria-hidden="true"></i>
-              </a>
+              <NavLink to="/createEvent">
+                <i className="fa fa-plus-circle fa-3x" aria-hidden="true" ></i>
+              </NavLink>
             </div>
           </div>
 
@@ -46,7 +77,7 @@ export default function Eventmain() {
               </div>
             </div>
           </div>
-
+        
           <div className="row">
             <div className="container col-12">
               <div className="card" style={{ width: "18rem" }}>
