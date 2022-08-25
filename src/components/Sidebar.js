@@ -2,7 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom';
 import { useProfile } from '../context/ProfileContext';
 import "../css/Sidebar.css"
-import profile from "../logo/Aayojak-logos/Aayojak-1.jpg";
+import profile from "../logo/Aayojak-logos/aayojaklogo1.jpg";
 export default function Sidebar() {
   const {isopen}= useProfile();
   console.log(isopen);

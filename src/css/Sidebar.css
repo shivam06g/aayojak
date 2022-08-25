@@ -1,55 +1,63 @@
 .sidebar{
-    /* background-image: linear-gradient(to right, #17062eca,#2f105aca); */
-    background-color: lightgray;
-    padding: 0 !important;
-    width: 100%;
-    height: auto;
-  }
+  /* background-image: linear-gradient(to right, #17062eca,#2f105aca); */
+  background-color:#632d68 !important;
+  padding: 0 !important;
+  width: 100%;
+  height: auto;
+}
 
-  .imgs {
-    padding-top: 20px;
-    justify-content: center;
-    display: flex;
-  }
-  .container-image {
-    background-color: rgb(223, 221, 221);
-    border-radius: 150px;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    height: 115px;
-    width: 115px;
-  }
-  .profile {
-    height: 80p;
-    width: 80px;
-    border-radius: 130px;
-  }
+.imgs {
+  padding-top: 20px;
+  justify-content: center;
+  display: flex;
+}
+.container-image {
+  border-width: 0px !important;
+  border-radius: 150px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 115px;
+  width: 115px;
+}
+.profile {
+  height: 80p;
+  width: 80px;
+  border-radius: 130px;
+}
 
-  .username {
-    font-family: 'Cinzel', serif;
-    /* font-family: 'Lobster', cursive; */
-  font-size: 5vw;
-  color: purple;
-  font-weight: bolder;
-  font-stretch: ultra-expanded;
-  text-align: center;
+.username {
+  font-family: 'Cinzel', serif;
+  /* font-family: 'Lobster', cursive; */
+font-size: 3vw;
+color: #FFF;
+font-weight: bolder;
+font-stretch: ultra-expanded;
+text-align: center;
 }
 
 .link
 
 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color:purple;
-    font-size: 2vw;
-    font-weight: 700;
-    margin: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:#FFF;
+  font-size: 2vw;
+  font-weight: 700;
+  margin: 8px;
 }
 
-@media (max-width:800){
-  .link{
-    font-size: 5vw;
-  }
+@media (max-width: 800px){
+.link{
+  font-size: 5vw;
+}
+}
+@media (max-width: 800px){
+.username{
+  font-size: 5vw;
+}
+}
+.tran{
+transition-delay: 3s;
 }

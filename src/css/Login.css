@@ -71,7 +71,7 @@ input:focus {
   height: 3em !important;
   border-width: 2px !important;
   border-color: rgb(255, 255, 255) !important;
-  background-color: #af7ab3 !important;
+  background-color: #632d68 !important;
   font-size: large !important;
   color: #fff !important;
   display: flex !important;
@@ -96,7 +96,7 @@ input:focus {
   display: flex;
 }
 .container-image {
-  background-color: rgb(223, 221, 221);
+  /* background-color: rgb(223, 221, 221); */
   border-radius: 150px;
   align-items: center;
   display: flex;
