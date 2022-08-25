@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Navigate } from "react-router";
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
 import { useProfile } from "../context/ProfileContext";
@@ -13,6 +14,7 @@ export default function EventForm() {
     setProfile(temp);
   }, [profile, setProfile]);
 
+  const [navi,setnavi]=useState(false);
   const [values, setValues] = useState({
     userid: profile.user._id,
     title: "None",
@@ -54,12 +56,15 @@ export default function EventForm() {
     .catch((error)=>{
          console.log(error);
     })
-
+    setnavi(true);
     // console.log(data);
+
   };
 
   // console.log("Create event page", profile);
 
+  if(navi===true)
+    return <Navigate to="/events"></Navigate>
   return (
     <div>
       <div className="row">

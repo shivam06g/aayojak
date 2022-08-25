@@ -6,6 +6,11 @@ import Sidebar from "../components/Sidebar";
 import { useProfile } from "../context/ProfileContext";
 import "../css/Eventmain.css";
 
+async function getAllEvents(id)
+{
+    let res = await fetch('http://localhost/')
+}
+
 export default function Eventmain() {
   const { profile, setProfile,isopen} = useProfile();
   useEffect(() => {
@@ -15,7 +20,7 @@ export default function Eventmain() {
     setProfile(temp);
   }, [profile, setProfile]);
 
-
+  let approvedEvents = getAllEvents("62f206fb51f34884e7a6f35b")
   return (
     <div>
       <div className="row">
@@ -48,7 +53,7 @@ export default function Eventmain() {
               </div>
             </div>
           </div>
-
+        
           <div className="row">
             <div className="container col-12">
               <div className="card" style={{ width: "18rem" }}>
